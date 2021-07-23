@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        .container{
+            width: 280px;
+            height: 300px;
+            background-color: #964B00;
+            margin: 80px;
+            padding: 80px;
+            margin-right: 20px;
+        }
+
+        #div1{
+            width: 220px;
+            height: 300px;
+            border: solid 2px #ffff;
+            text-align: center;
+            margin-right: 20px;
+        }
+
+        #fooBar{
+            font-size: 50px;
+            text-align: center;
+        }
+
+        h2{
+            font-size: 45px;
+        }
+
+
+        button{
+            background-color: #6a7cca;
+            padding: 10px;
+            color: #000;
+            font-size: 12px ;
+            border-radius: 5px;
+        }
+
+        button:hover{
+            cursor: grab;
+            background-color: #964B00;
+
+        }
+
+        button:active{
+            top: 2px;
+            cursor: pointer;
+            background-color: #ccc;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="div1">
+            <h1 id="fooBar">Counter</h1>
+            <h2 id="DIV2">0</h2>
+
+            <button id="btn1" onclick="decrement()">Lower Count</button>
+            <button onclick="increment()">Add Count</button>
+        </div>
+    </div>
+
+    <script>
+        let increase = 0;
+        function increment(){
+            increase++;
+            document.querySelector('#DIV2').innerHTML = increase;
+
+            if(increase == 7){
+            document.getElementById('DIV2').style.color = "green";
+        }else
+            {
+                document.getElementById('DIV2').style.color ="black"; 
+            }
+        
+        }
+
+
+        let decrease = 0;
+        function decrement(){
+            decrease--;
+            document.querySelector('#DIV2').innerHTML = decrease;
+        }
+    </script>
+</body>
+</html>
